@@ -1,0 +1,150 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: white;
+}
+h1{
+    color:green;
+    font-family: cursive;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    border-bottom: 1px solid rgb(115, 113, 113);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px 15px;
+    position: relative;
+    transition: color 0.5s;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    width: 0;
+    height: 2px;
+    background-color: aqua;
+    transition: width 0.5s ease;
+}
+
+nav ul li a:hover {
+    color:aqua;
+}
+
+nav ul li a:hover::after {
+    width: 80%;
+    left: 10%;
+}
+
+section {
+    padding: 50px;
+    text-align: left;
+}
+
+#projects {
+    margin-top: 100px;
+}
+
+#project-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.project-card {
+    width: 300px;
+    height: 370px;
+    background-color: black;
+    border: 2px solid white;
+    border-radius: 20px;
+    position: relative;
+    margin-right: 40px;
+    margin-left: 55px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: background 0.5s ease;
+}
+
+.project-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.project-card img{
+    width:350px;
+    height: 400px;
+    overflow: hidden;
+}
+
+.project-card:hover {
+    border: 5px solid aqua;
+    background: linear-gradient(black,aqua);
+}
+
+.btn-view-more {
+    margin: 20px auto;
+    display: block;
+    background-color:black;
+    color: white;
+    border: 2px solid white;
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 18px;
+
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-view-more:hover {
+    background:linear-gradient(aqua,black);
+    color: white;
+    border: 2px solid aqua;
+}
+
+.project-row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.btn-download{
+
+    display: block;
+    background-color: black;
+    color: white;
+    border:2px solid white;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.5s;
+}
+.btn-download:hover{
+    border:3px solid aqua;
+    background:linear-gradient(aqua, black);
+    color: white;
+}
